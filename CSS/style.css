@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html,
+/* html,
 body,
 div,
 span,
@@ -93,7 +93,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
+/*article,
 aside,
 details,
 figcaption,
@@ -132,7 +132,7 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
+} */
 
 .header {
     padding: 10px;
@@ -296,4 +296,58 @@ table {
     .body__section {
         flex: 1 1 100%;
     }
+}
+
+.table_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    place-self: center;
+}
+
+.table_container thead,
+tbody,
+tr {
+    display: contents;
+}
+
+.table_container td,
+th {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.table_container th {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #d75d10;
+}
+
+.table_container tbody tr:nth-child(even) td {
+    background-color: #dce8f2;
+}
+
+.table_container tbody tr:nth-child(odd) td {
+    background-color: dimgray;
+}
+
+.block_menu_news {
+    background-color: #dce8f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.block_menu_news h2 {
+    color: #070c11;
+    font-size: 2.5rem;
+}
+
+a:hover {
+    color: #d75d10;
+}
+
+a.active {
+    color: #9c1f1fdd;
 }
