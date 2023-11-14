@@ -1,9 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    let startTime = performance.now();
-
     window.addEventListener('load', function() {
-        var loadTime = performance.now() - startTime;
+        var loadTime = performance.now();
         console.log('Время загрузки страницы: ' + loadTime + ' мс');
 
         var footer = document.createElement('footer');
