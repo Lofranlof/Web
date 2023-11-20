@@ -166,7 +166,7 @@ table {
 
 .body {
     margin: 20px;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #f0f0f0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     padding: 10px;
@@ -188,6 +188,7 @@ table {
     margin: 10px;
     text-align: center;
     text-decoration: none;
+    text-transform: none;
 }
 
 .body__section__paragraph {
@@ -210,7 +211,7 @@ table {
 }
 
 .body__list__item {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     padding: 5px;
     margin: 5px;
 }
@@ -266,7 +267,7 @@ table {
 
 @media screen and (max-width: 1920px) {
     .body__section {
-        flex: 1 1 45%;
+        flex: 1 1 100%;
     }
 }
 
@@ -300,9 +301,11 @@ table {
 
 .table_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(3, 50px 100px);
     grid-gap: 10px;
     place-self: center;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
 }
 
 .table_container thead,
@@ -315,22 +318,26 @@ tr {
 th {
     padding: 10px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .table_container th {
-    font-size: 1.5rem;
+    font-size: 1em;
     margin-top: 10px;
     color: #ffffff;
 }
 
 .table_container tbody tr:nth-child(even) td {
     background-color: #6e6e6e;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .table_container tbody tr:nth-child(odd) td {
     background-color: dimgray;
+    margin-top: 40px;
+    margin-bottom: 0px;
 }
 
 .block_menu_news {
@@ -341,7 +348,7 @@ th {
 
 .block_menu_news h2 {
     color: #000000;
-    font-size: 2.5rem;
+    font-size: 2em;
 }
 
 a:hover {
