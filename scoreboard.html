@@ -11,16 +11,28 @@
         <h1 class="header__title">Scoreboard</h1>
         <nav class="header__nav"><a href="index.html">General</a> <a href="scoreboard.html" class="active">PRScoreboard</a> <a href="achievements.html">Achievements</a> <a href="resources.html">Resources</a> <a href="profile.html">Profile</a> <a href="todo.html">ToDoList</a></nav>
     </header>
-    <section class="main_section">
-      <h2>Toughest mf'ers out there </h2>
-      <div class="preloader_container">
-          <div class="preloader"></div>
-      </div>
-      <div class="error_message">
-          <p class="error_text"></p>
-      </div>
-      <div class="cards_container"></div>
-  </section>
+    <main>
+        <section class="main_section">
+          <h2>Toughest mf'ers out there </h2>
+          <div class="preloader_container">
+              <div class="preloader"></div>
+          </div>
+          <div class="error_message">
+              <p class="error_text"></p>
+          </div>
+          <div class="cards_container">
+            <template id="user_card_template">
+              <div class="user_card">
+                <p class="user_info nickname"></p>
+                <p class="user_info date"></p>
+                <p class="user_info wellbeing"></p>
+                <p class="user_info benchpress"></p>
+                <p class="user_info squat"></p>
+                <p class="user_info deadlift"></p>
+            </div>
+            </template>
+          </div>
+      </section>
     </main>
     <footer>
     </footer>

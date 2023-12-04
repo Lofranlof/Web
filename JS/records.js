@@ -17,16 +17,15 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (response.ok) {
             const users = await response.json();
             preloaderContainer.style.display = 'none';
+            const userCardTemplate = document.getElementById('user_card_template');
             users.forEach(user => {
-                const userCard = document.createElement('div');
-                userCard.classList.add('user_card');
-                userCard.innerHTML = `
-                    <p class="user_info">Nickname: ${user.nickname}</p>
-                    <p class="user_info">Date: ${user.date}</p>
-                    <p class="user_info">Wellbeing: ${user.wellBeing}</p>
-                    <p class="user_info">Bench Press: ${user.benchPress} кг</p>
-                    <p class="user_info">Squat: ${user.squat} кг</p>
-                    <p class="user_info">Deadlift: ${user.deadlift} кг</p>`;
+                const userCard = document.importNode(userCardTemplate.content, true);
+                userCard.querySelector('.user_info.nickname').textContent = 'Nickname: ${user.nickname}';
+                userCard.querySelector('.user_info.date').textContent = 'Date of the record: ${user.date}';
+                userCard.querySelector('.user_info.wellbeing').textContent = 'Wellbeing: ${user.wellbeing}';
+                userCard.querySelector('.user_info.benchpress').textContent = 'Bench Press: ${user.benchpress} kg';
+                userCard.querySelector('.user_info.squat').textContent = 'Squat: ${user.squat} kg';
+                userCard.querySelector('.user_info.deadlift').textContent = 'Deadlift: ${user.deadlift} kg';
                 userCardsContainer.appendChild(userCard);
             });
         } else {
