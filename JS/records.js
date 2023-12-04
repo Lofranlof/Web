@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     const errorText = document.querySelector('.error_text');
 
     try {
-        const fetchString = 'https://my-json-server.typicode.com/Lofranlof/MockRESTAPI/champions';
+        const fetchString = (Math.floor(Math.random() * 2) === 0 )
+        ? 'https://my-json-server.typicode.com/Lofranlof/MockRESTAPI/champions?benchPress_gte=130'
+        : 'https://my-json-server.typicode.com/Lofranlof/MockRESTAPI/champions?deadlift_gte=180' ;
 
         preloaderContainer.style.display = 'flex';
         const response = await fetch(fetchString);
