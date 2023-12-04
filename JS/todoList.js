@@ -47,7 +47,7 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
 function playAlertSound() {
-    let audio = new Audio('audio/alert.mp3');
+    let audio = new Audio("AUDIO/alert.mp3");
     audio.play();
 }
 function addTask() {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         preloaderContainer.style.display = 'flex';
         const response = await fetch(fetchString);
 
-        await new Promise(resolve => setTimeout(resolve, 4000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         if (response.ok) {
             const users = await response.json();

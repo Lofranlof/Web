@@ -422,7 +422,7 @@ ul.todoList li::before{
     position: absolute;
     height: 28px;
     width: 28px;
-    background-image: url(/IMG/checkbox_uncheked.png);
+    background-image: url(../IMG/checkbox_uncheked.png);
     background-size: cover;
     background-position: center;
     top: 8px;
@@ -433,7 +433,7 @@ ul.todoList li.checked{
     text-decoration: line-through;
 }
 ul.todoList li.checked::before {
-    background-image: url(/IMG/checkbox_cheked.png);
+    background-image: url(../IMG/checkbox_cheked.png);
 }
 ul.todoList li span {
     position: absolute;
@@ -462,7 +462,7 @@ ul.todoList li span:hover {
     border-radius: 50%;
     width: 180px;
     height: 180px;
-    background: url('/IMG/ronnie.gif') no-repeat center center;
+    background: url(../IMG/ronnie.gif) no-repeat center center;
 }
 
 .main_section {
