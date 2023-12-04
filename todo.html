@@ -16,7 +16,7 @@
             <div class="todo">
                 <h2>ToDo List</h2>
                 <div class="row">
-                    <input id="input-box" type="text" placeholder="Type your task">
+                    <input id="input-box" type="text" placeholder="Type your task" onkeydown="checkEnter(event)">
                     <button onclick="addTask()">Add task</button>
                 </div>
                 <ul class="todoList" id="list-container">

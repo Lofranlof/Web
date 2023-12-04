@@ -401,12 +401,13 @@ input {
 button {
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 16px 10px;
     background: #5f5959;
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    flex: 1;
 }
 ul.todoList li {
     list-style: none;
@@ -449,4 +450,63 @@ ul.todoList li span {
 ul.todoList li span:hover {
     background: #edeef0;
 
+}
+.preloader_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.preloader {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background: url('/IMG/ronnie.gif') no-repeat center center;
+}
+
+.main_section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.main_section h2 {
+    color: #d71010;
+    font-size: 2.5rem;
+}
+
+.cards_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user_card {
+    flex: 0 0 calc(33.333% - 20px);
+    background-color: #d6d6d6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.user_card p {
+    color: #000000;
+    margin: 0;
+}
+
+.error_message {
+    display: none;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.error_text {
+    color: #000000;
+    font-size: 3rem;
 }
