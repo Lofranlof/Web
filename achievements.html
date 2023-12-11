@@ -1,16 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8"/>
     <title>Achievements</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/timeToLoad.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .swiper {
+        width: 250px;
+        height: 300px;
+        padding: 50px;
+      }
+  
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 300px;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+      p {
+        font-size: 1vh, 1vw;
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
-        <h1 class="header__title">Achievements</h1>
-        <nav class="header__nav"><a href="index.html">General</a> <a href="scoreboard.html">PRScoreboard</a> <a href="achievements.html" class="active">Achievements</a> <a href="resources.html">Resources</a> <a href="profile.html">Profile</a> <a href="todo.html">ToDoList</a></nav>
-    </header>
+      <h1 class="header__title">Achievements</h1>
+      <nav class="header__nav"><a href="index.html">General</a> <a href="scoreboard.html">PRScoreboard</a> <a href="achievements.html" class="active">Achievements</a> <a href="resources.html">Resources</a> <a href="profile.html">Profile</a> <a href="todo.html">ToDoList</a></nav>
+  </header>
     <main class="body">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Noob.png" />
+            <p>Noob</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Amateur.png" />
+            <p>Amateur</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Pro.png" />
+            <p>Pro</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Rare1.png" />
+            <p>Swole lvl 1</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Rare2.png" />
+            <p>Swole lvl 2</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Epic1.png" />
+            <p>Cut lvl 1</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Legendary1.png" />
+            <p>Ripped</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Legendary2.png" />
+            <p>Yoked</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/Legendary3.png" />
+            <p>Jacked</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/IMG/Levels/extra.png" />
+            <p>Shredded</p>
+          </div>
+          <div class="swiper-slide" id="lastSlide">
+            <img src="/IMG/Levels/heheheha.png" />
+            <p><strong>ABSOLUTE UNIT</strong></p>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <audio id="randomAudio" controls style="display: none;">
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      
+    
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "flip",
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        var lastSlide = document.getElementById("lastSlide");
+        var audioElement = document.getElementById("randomAudio");
+        var audioSources = [
+          "/AUDIO/audio1.mp3",
+          "/AUDIO/audio2.mp3",
+          "/AUDIO/audio3.mp3",
+          "/AUDIO/audio4.mp3",
+          "/AUDIO/audio5.mp3",
+          "/AUDIO/audio6.mp3",
+          "/AUDIO/audio7.mp3",
+          "/AUDIO/audio8.mp3",
+          "/AUDIO/audio9.mp3",
+          // Add more audio sources as needed
+        ];
+
+        lastSlide.addEventListener("click", function () {
+          // Get a random audio source
+          var randomIndex = Math.floor(Math.random() * audioSources.length);
+          var randomAudioSource = audioSources[randomIndex];
+
+          // Set the source of the audio element
+          audioElement.src = randomAudioSource;
+
+          // Play the audio
+          audioElement.play();
+        });
+      </script>
     </main>
     <footer>
     </footer>
