@@ -5,6 +5,7 @@
     <title>Achievements</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/timeToLoad.js"></script>
+    <script src="JS/swiper.js"></script>
         <!-- Meta viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
         <!-- Link to external stylesheet for Swiper carousel -->
@@ -115,52 +116,7 @@
         <source src="" type="audio/mp3">
         Your browser does not support the audio element.
       </audio>
-      
-      <!-- Swiper JavaScript library -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <!-- Custom script for Swiper configuration and audio -->
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          effect: "flip",
-          grabCursor: true,
-          pagination: {
-            el: ".swiper-pagination",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-
-        // Get last slide and set up random audio functionality
-        var lastSlide = document.getElementById("lastSlide");
-        var audioElement = document.getElementById("randomAudio");
-        var audioSources = [
-          "AUDIO/audio1.mp3",
-          "AUDIO/audio2.mp3",
-          "AUDIO/audio3.mp3",
-          "AUDIO/audio4.mp3",
-          "AUDIO/audio5.mp3",
-          "AUDIO/audio6.mp3",
-          "AUDIO/audio7.mp3",
-          "AUDIO/audio8.mp3",
-          "AUDIO/audio9.mp3",
-          // Add more audio sources as needed
-        ];
-
-        // Event listener for clicking on the last slide
-        lastSlide.addEventListener("click", function () {
-          // Get a random audio source
-          var randomIndex = Math.floor(Math.random() * audioSources.length);
-          var randomAudioSource = audioSources[randomIndex];
-
-          // Set the source of the audio element
-          audioElement.src = randomAudioSource;
-
-          // Play the audio
-          audioElement.play();
-        });
-      </script>
     </main>
     <footer class="footer">
       <section>
